@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALUXOR | AI-Powered Unified Healthcare Platform</title>
+    <meta name="description"
+        content="SALUXOR integrates Medicine Intelligence, Personalized Fitness, Metabolic Nutrition, and Mental Wellness into a unified AI-powered healthcare ecosystem. Discover the future of human longevity.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Background Noise & Grid -->
+    <div class="grid-overlay"></div>
+    <div class="radial-glow glow-1"></div>
+    <div class="radial-glow glow-2"></div>
+    <div class="radial-glow glow-3"></div>
+    <!-- Header & Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="./logo.png" alt="SALUXOR Logo" class="logo-img">
+                <span class="logo-text">SALUXOR</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Pillars</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#comparison" class="nav-link">Verdict</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#cta" class="btn btn-secondary nav-cta-btn">Join Betalist</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Next-Gen Medical Intelligence</span>
+                    </div>
+                    <h1 class="hero-title">
+                        The Single Operating System for <span class="gradient-text">Human Health</span>
+                    </h1>
+                    <p class="hero-description">
+                        SALUXOR synthesizes medical diagnostics, real-time biometrics, metabolic nutrition, and neural
+                        health into a single unified AI model. Engineered for longevity.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#cta" class="btn btn-primary">Begin Longevity Assessment</a>
+                        <a href="#how-it-works" class="btn btn-tertiary">Explore System Architecture</a>
+                    </div>
+                    <!-- Hero Social Icons -->
+                    <div class="hero-socials">
+                        <a href="https://instagram.com/saluxorofficial" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" title="Instagram @saluxorofficial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/saluxor/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" title="SALUXOR on LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="mailto:saluxorofficial@gmail.com" class="social-icon-btn" title="Email SALUXOR">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Floating Biometric Panel (Hero Mockup) -->
+                <div class="hero-mockup-wrapper scroll-trigger-element" id="hero-mockup">
+                    <div class="glass-card main-dashboard">
+                        <div class="dashboard-header">
+                            <div class="user-profile">
+                                <div class="avatar"></div>
+                                <div class="profile-info">
+                                    <span class="profile-name">PX-75 Longevity Protocol</span>
+                                    <span class="profile-status">System Active &bull; Clinical Grade</span>
+                                </div>
+                            </div>
+                            <div class="pulse-indicator">
+                                <span class="pulse-label">Biometric Sync</span>
+                                <div class="pulse-ring"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-grid">
+                            <!-- Pod 1: Medicine Intelligence -->
+                            <div class="dashboard-pod pod-medicine">
+                                <div class="pod-header">
+                                    <i data-lucide="activity" class="text-cyan"></i>
+                                    <span class="pod-title">Medicine Intelligence</span>
+                                </div>
+                                <div class="pod-value" id="med-int-score">98.4%</div>
+                                <div class="pod-label">Diagnostic Accuracy</div>
+                                <div class="pod-sparkline">
+                                    <div class="bar-fill" style="height: 70%;"></div>
+                                    <div class="bar-fill" style="height: 85%;"></div>
+                                    <div class="bar-fill" style="height: 92%;"></div>
+                                    <div class="bar-fill" style="height: 98%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Pod 2: Fitness load -->
+                            <div class="dashboard-pod pod-fitness">
+                                <div class="pod-header">
+                                    <i data-lucide="zap" class="text-violet"></i>
+                                    <span class="pod-title">Optimal Load Limit</span>
+                                </div>
+                                <div class="pod-value" id="fit-score">84%</div>
+                                <div class="pod-label">Recovery Score</div>
+                                <div class="fitness-indicator">
+                                    <div class="indicator-bar" style="width: 84%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Pod 3: Nutrition insulin curve -->
+                            <div class="dashboard-pod pod-nutrition">
+                                <div class="pod-header">
+                                    <i data-lucide="droplet" class="text-emerald"></i>
+                                    <span class="pod-title">Glucose Curve</span>
+                                </div>
+                                <div class="glucose-sparkline">
+                                    <svg viewBox="0 0 100 30" class="sparkline-svg">
+                                        <path d="M 0,20 Q 25,5 50,22 T 100,10" fill="none" stroke="var(--color-emerald)"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="pod-footer-meta">
+                                    <span class="glucose-val">94 mg/dL</span>
+                                    <span class="trend-indicator status-optimal">Stable</span>
+                                </div>
+                            </div>
+
+                            <!-- Pod 4: Mental Wellness HRV -->
+                            <div class="dashboard-pod pod-mental">
+                                <div class="pod-header">
+                                    <i data-lucide="brain" class="text-amber"></i>
+                                    <span class="pod-title">Cortisol Defense</span>
+                                </div>
+                                <div class="pod-value" id="stress-lvl">Optimal</div>
+                                <div class="pod-label">HRV: 92 ms</div>
+                                <div class="hrv-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AI Advice Center -->
+                        <div class="ai-insight-box">
+                            <div class="insight-icon">✨</div>
+                            <div class="insight-content">
+                                <div class="insight-title">SALUXOR AI Recommendation</div>
+                                <p class="insight-text" id="dynamic-insight">
+                                    Elevated HRV indicates high recovery. Recommended: High intensity training block.
+                                    Adjust meal schedule forward 20 minutes for glucose stabilization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The 4 Core Pillars Section -->
+        <section class="features-section section-padding" id="features">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Four Pillars. One Integrated Intelligence.</h2>
+                    <p class="section-subtitle">
+                        Most health platforms work in silos. SALUXOR correlates data points across all vectors to find
+                        critical insights others miss.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <!-- Pillar 1: Medicine Intelligence -->
+                    <div class="feature-card glass-card scroll-trigger-element" data-color="cyan">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="feature-icon-wrapper circle-cyan">
+                                <i data-lucide="shield-alert"></i>
+                            </div>
+                            <h3 class="feature-title">Medicine Intelligence</h3>
+                            <p class="feature-text">
+                                Continuous clinical-grade diagnostics analysis. SALUXOR tracks biomarkers, translates
+                                genomic sequencing, alerts on medication synergies, and generates comprehensive co-pilot
+                                medical summaries for your physician.
+                            </p>
+
+                            <!-- Mini Interactive Interface -->
+                            <div class="card-ui-mockup">
+                                <div class="mock-card-header">
+                                    <span class="label">GENOMIC PATHOLOGY</span>
+                                    <span class="status pulse">14 Alerts Synced</span>
+                                </div>
+                                <div class="mock-card-row">
+                                    <span class="metric-name">ApoE4 Status</span>
+                                    <span class="metric-value status-warning">Heterozygous</span>
+                                </div>
+                                <div class="mock-card-row">
+                                    <span class="metric-name">Drug Sensitivity (Statins)</span>
+                                    <span class="metric-value status-optimal">Low Toxicity Risk</span>
+                                </div>
+                                <div class="mock-card-chart">
+                                    <div class="mock-progress" style="width: 75%; background: var(--color-cyan);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 2: Personalised Fitness -->
+                    <div class="feature-card glass-card scroll-trigger-element" data-color="violet">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="feature-icon-wrapper circle-violet">
+                                <i data-lucide="dumbbell"></i>
+                            </div>
+                            <h3 class="feature-title">Personalised Fitness</h3>
+                            <p class="feature-text">
+                                No standard templates. Workouts are adapted in real-time based on sleep architecture,
+                                heart-rate variability (HRV), and muscle load telemetry. Features visual camera-based
+                                posture and mechanical efficiency checks.
+                            </p>
+
+                            <!-- Mini Interactive Interface -->
+                            <div class="card-ui-mockup">
+                                <div class="mock-card-header">
+                                    <span class="label">BIOMECHANICAL INTEGRITY</span>
+                                    <span class="status">Joint Alignment: 94%</span>
+                                </div>
+                                <div class="fitness-skeleton">
+                                    <div class="skeleton-node joint-head"></div>
+                                    <div class="skeleton-bone bone-spine"></div>
+                                    <div class="skeleton-node joint-shoulder-l"></div>
+                                    <div class="skeleton-node joint-shoulder-r"></div>
+                                    <div class="skeleton-bone bone-arm-l"></div>
+                                    <div class="skeleton-bone bone-arm-r"></div>
+                                </div>
+                                <div class="mock-card-row">
+                                    <span class="metric-name">Left Patella Torque</span>
+                                    <span class="metric-value status-warning">Adjust +3° Ext.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 3: Nutrition That Works -->
+                    <div class="feature-card glass-card scroll-trigger-element" data-color="emerald">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="feature-icon-wrapper circle-emerald">
+                                <i data-lucide="scale"></i>
+                            </div>
+                            <h3 class="feature-title">Nutrition That Works</h3>
+                            <p class="feature-text">
+                                By tracking metabolic inputs (via continuous glucose monitoring) and crossing them with
+                                digestive profiles, we engineer custom dietary systems. Skip generic calorie
+                                calculations—feed your specific microbiome.
+                            </p>
+
+                            <!-- Mini Interactive Interface -->
+                            <div class="card-ui-mockup">
+                                <div class="mock-card-header">
+                                    <span class="label">POSTPRANDIAL GLUCOSE CURVE</span>
+                                    <span class="status status-optimal">Metabolic Score: 9.2</span>
+                                </div>
+                                <div class="glucose-chart-container">
+                                    <div class="glucose-curve-graph">
+                                        <!-- Dynamic chart elements created in CSS/JS -->
+                                        <span class="spike-indicator" style="left: 60%; top: 20%;">Carb Spike</span>
+                                        <div class="glucose-grid-lines">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-card-row">
+                                    <span class="metric-name">Insulin Peak Delay</span>
+                                    <span class="metric-value">42 mins (Optimal)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 4: Mental Wellness -->
+                    <div class="feature-card glass-card scroll-trigger-element" data-color="amber">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="feature-icon-wrapper circle-amber">
+                                <i data-lucide="smile"></i>
+                            </div>
+                            <h3 class="feature-title">Mental Wellness</h3>
+                            <p class="feature-text">
+                                Stress is biological. SALUXOR captures real-time electrodermal activity and HRV data to
+                                map your sympathetic nervous response. It automatically delivers customized,
+                                biometric-triggered neural cooldown exercises.
+                            </p>
+
+                            <!-- Mini Interactive Interface -->
+                            <div class="card-ui-mockup">
+                                <div class="mock-card-header">
+                                    <span class="label">NEURAL DEFENSE SYSTEM</span>
+                                    <span class="status pulse-amber">Cortisol Active</span>
+                                </div>
+                                <div class="wellness-wave-canvas">
+                                    <div class="wave-pulse p1"></div>
+                                    <div class="wave-pulse p2"></div>
+                                    <div class="wave-pulse p3"></div>
+                                </div>
+                                <div class="mock-card-row">
+                                    <span class="metric-name">Vagal Tone Indicator</span>
+                                    <span class="metric-value status-optimal">Highly Adaptive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section -->
+        <section class="how-it-workssection section-padding" id="how-it-works">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">How SALUXOR Operates</h2>
+                    <p class="section-subtitle">
+                        A high-fidelity pipeline that continuously optimizes your biology, backed by AI precision and
+                        medical-grade oversight.
+                    </p>
+                </div>
+                <div class="timeline-wrapper">
+                    <div class="timeline-progress-bar">
+                        <div class="timeline-progress-fill" id="timeline-progress"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="timeline-step scroll-trigger-element">
+                        <div class="timeline-badge">1</div>
+                        <div class="timeline-content glass-card">
+                            <div class="step-meta">STAGE 01 — INTEGRATION</div>
+                            <h3 class="step-title">Biometric Telemetry Ingestion</h3>
+                            <p class="step-desc">
+                                Upload historical blood lab results, share digital health profiles, and provide optional
+                                genomic sequencing data. All encrypted with zero-knowledge keys.
+                            </p>
+                        </div>
+                        <div class="timeline-visual">
+                            <div class="telemetry-node-sphere">
+                                <div class="orbiting-dot"></div>
+                                <div class="orbiting-dot-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-step scroll-trigger-element">
+                        <div class="timeline-badge">2</div>
+                        <div class="timeline-content glass-card">
+                            <div class="step-meta">STAGE 02 — SYNTHESIS</div>
+                            <h3 class="step-title">Multimodal AI Correlator</h3>
+                            <p class="step-desc">
+                                SALUXOR's proprietary AI compares genetic risk markers with real-time biometric response
+                                curves (e.g. how high HRV reacts to cortisol spikes after glucose spikes). It detects
+                                hidden anomalies weeks before physical symptoms present.
+                            </p>
+                        </div>
+                        <div class="timeline-visual">
+                            <div class="ai-processor-mesh">
+                                <span></span><span></span><span></span>
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-step scroll-trigger-element">
+                        <div class="timeline-badge">3</div>
+                        <div class="timeline-content glass-card">
+                            <div class="step-meta">STAGE 03 — INTERVENTION</div>
+                            <h3 class="step-title">Hourly Dynamic Protocols</h3>
+                            <p class="step-desc">
+                                Get action prompts delivered straight to your devices. Medicine doses, nutrient intake
+                                windows, workout parameters, and recovery drills adjust dynamically based on today's
+                                biology.
+                            </p>
+                        </div>
+                        <div class="timeline-visual">
+                            <div class="protocol-timeline-box">
+                                <div class="timeline-event">08:00 AM &bull; Supplement Sync</div>
+                                <div class="timeline-event active">12:30 PM &bull; Post-load Glucose Walk</div>
+                                <div class="timeline-event">09:30 PM &bull; Circadian Melatonin Sync</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-step scroll-trigger-element">
+                        <div class="timeline-badge">4</div>
+                        <div class="timeline-content glass-card">
+                            <div class="step-meta">STAGE 04 — CLINICAL OVERWATCH</div>
+                            <h3 class="step-title">Medical Board Integration</h3>
+                            <p class="step-desc">
+                                AI outputs are vetted by board-certified longevity physicians. Real prescriptions,
+                                advanced diagnostics (like MRI scans or heavy metals testing), and therapy protocols are
+                                authorized by humans with AI-guided assistance.
+                            </p>
+                        </div>
+                        <div class="timeline-visual">
+                            <div class="clinical-badge">
+                                <i data-lucide="award"></i>
+                                <span>MD Board Certified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Competitor Strategic Verdict -->
+        <section class="comparison-section section-padding" id="comparison">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Strategic Comparison</h2>
+                    <p class="section-subtitle">
+                        Why current fitness and healthcare ecosystems fail, and how SALUXOR changes the paradigm.
+                    </p>
+                </div>
+                <!-- Competitor Toggle Details -->
+                <div class="competitor-verdict-box glass-card">
+                    <div class="verdict-header">
+                        <h3>Competitor Limitations Matrix</h3>
+                        <p>Select a competitor below to see the strategic analysis and why SALUXOR is superior.</p>
+                    </div>
+
+                    <div class="competitor-buttons">
+                        <button class="comp-btn active" data-competitor="apple">Apple Health</button>
+                        <button class="comp-btn" data-competitor="noom">Noom / Diet Apps</button>
+                        <button class="comp-btn" data-competitor="onemedical">One Medical / Primary Care</button>
+                    </div>
+                    <div class="verdict-content" id="verdict-display">
+                        <!-- Content dynamically populated by main.js -->
+                        <div class="verdict-grid">
+                            <div class="verdict-analysis">
+                                <h4>Apple Health Analysis</h4>
+                                <p class="verdict-text">
+                                    Apple Health functions as a passive repository of sensor data. It collects metrics
+                                    but provides zero clinical recommendations, cannot prescribe therapeutics, does not
+                                    analyze blood panels, and lacks cross-domain correlation. It answers "what
+                                    happened?" but never "what should I do next?".
+                                </p>
+                                <div class="verdict-strength-bar">
+                                    <span>Saluxor Advantage:</span>
+                                    <div class="advantage-bar">
+                                        <div class="advantage-fill" style="width: 90%;"></div>
+                                    </div>
+                                    <span class="percent">9.8x Actionability</span>
+                                </div>
+                            </div>
+                            <div class="verdict-metric-comparison">
+                                <div class="comp-row"><span>Genomic Integration</span><span class="val no">No</span>
+                                </div>
+                                <div class="comp-row"><span>Physician Copilot Reports</span><span
+                                        class="val no">No</span></div>
+                                <div class="comp-row"><span>Metabolic Tracking</span><span class="val yes">Basic
+                                        Sync</span></div>
+                                <div class="comp-row"><span>AI-Driven Prescription Logic</span><span
+                                        class="val no">No</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comparison Table -->
+                <div class="comparison-table-wrapper scroll-trigger-element">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature Matrix</th>
+                                <th>Apple Health</th>
+                                <th>One Medical</th>
+                                <th class="highlight-col">SALUXOR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feat-name">Biomarker & Lab Aggregation</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="check" class="text-emerald"></i> (Manual)</td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feat-name">Genomic & Blood Synthesis</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="check" class="text-emerald"></i> (Manual)</td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feat-name">Real-Time Metabolic Correlation</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feat-name">Hourly Actionable Protocols</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feat-name">AI Prescriptive Assistance</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feat-name">Board-Certified Oversight</td>
+                                <td><i data-lucide="x" class="text-rose"></i></td>
+                                <td><i data-lucide="check" class="text-emerald"></i></td>
+                                <td class="highlight-col"><i data-lucide="check" class="text-cyan"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing / Tiers Section -->
+        <section class="pricing-section section-padding" id="pricing">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Investment in Longevity</h2>
+                    <p class="section-subtitle">
+                        Flexible packages matching your depth of desired optimization.
+                    </p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Tier 1 -->
+                    <div class="pricing-card glass-card scroll-trigger-element">
+                        <div class="pricing-badge">Optimized Starter</div>
+                        <h3 class="tier-title">SALUXOR Essential</h3>
+                        <div class="price-box">
+                            <span class="currency">$</span>
+                            <span class="price">49</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="tier-desc">Perfect for aggregating digital health records and receiving AI-correlated
+                            reports.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> Multi-source health record sync</li>
+                            <li><i data-lucide="check"></i> Nutrition & Metabolic Correlator</li>
+                            <li><i data-lucide="check"></i> Weekly wellness strategy reports</li>
+                            <li><i data-lucide="check"></i> Basic cortisol & stress mapping</li>
+                        </ul>
+                        <a href="#cta" class="btn btn-secondary btn-full">Access Essential Protocol</a>
+                    </div>
+                    <!-- Tier 2 - Recommended -->
+                    <div class="pricing-card glass-card recommended scroll-trigger-element">
+                        <div class="pricing-badge-highlight">Most Selected</div>
+                        <div class="pricing-badge">Clinical Synthesis</div>
+                        <h3 class="tier-title">SALUXOR Elite</h3>
+                        <div class="price-box">
+                            <span class="currency">$</span>
+                            <span class="price">149</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="tier-desc">Our flagship integration of biomarker labs, CGMs, and adaptive fitness
+                            systems.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> <strong>Everything in Essential</strong></li>
+                            <li><i data-lucide="check"></i> Full Blood Panel Lab Integration</li>
+                            <li><i data-lucide="check"></i> CGM continuous glucose analysis</li>
+                            <li><i data-lucide="check"></i> Kinetic Joint Assessment (Camera)</li>
+                            <li><i data-lucide="check"></i> Automated MD prescriptions co-signing</li>
+                        </ul>
+                        <a href="#cta" class="btn btn-primary btn-full">Access Elite Protocol</a>
+                    </div>
+                    <!-- Tier 3 -->
+                    <div class="pricing-card glass-card scroll-trigger-element">
+                        <div class="pricing-badge">Complete Oversight</div>
+                        <h3 class="tier-title">SALUXOR Sovereign</h3>
+                        <div class="price-box">
+                            <span class="currency">$</span>
+                            <span class="price">499</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="tier-desc">Unrestricted, comprehensive cellular defense and direct longevity physician
+                            access.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> <strong>Everything in Elite</strong></li>
+                            <li><i data-lucide="check"></i> Epigenetic & DNA Methylation Tests</li>
+                            <li><i data-lucide="check"></i> Dedicated Longevity Physician</li>
+                            <li><i data-lucide="check"></i> Full-body MRI cancer screening (Annual)</li>
+                            <li><i data-lucide="check"></i> Priority concierge support</li>
+                        </ul>
+                        <a href="#cta" class="btn btn-secondary btn-full">Request Sovereign Placement</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Waitlist CTA Section -->
+        <section class="cta-section section-padding" id="cta">
+            <div class="container relative-pos">
+                <div class="cta-card glass-card text-center scroll-trigger-element">
+                    <h2 class="cta-title">Stop managing your health in five different apps.<br>Start understanding it in
+                        one.</h2>
+                    <p class="cta-subtitle">
+                        Enter your email to join the betalist.
+                    </p>
+
+                    <form class="cta-form" id="waitlist-form">
+                        <div class="form-group">
+                            <input type="email" id="waitlist-email"
+                                placeholder="Enter your clinical credentials or personal email" required
+                                autocomplete="email">
+                            <button type="submit" class="btn btn-primary">Secure Beta Spot</button>
+                        </div>
+                        <div class="form-feedback" id="waitlist-feedback"></div>
+                    </form>
+
+                    <div class="cta-badges">
+                        <span><i data-lucide="shield-check"></i> HIPAA Compliant</span>
+                        <span>&bull;</span>
+                        <span><i data-lucide="lock"></i> End-to-End Encrypted</span>
+                        <span>&bull;</span>
+                        <span><i data-lucide="users"></i> 14,000+ waitlisted</span>
+                    </div>
+                    <div class="cta-socials">
+                        <a href="https://instagram.com/saluxorofficial" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" title="Instagram @saluxorofficial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/saluxor/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" title="SALUXOR on LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="mailto:saluxorofficial@gmail.com" class="social-icon-btn" title="Email SALUXOR">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-link">
+                    <img src="./logo.png" alt="SALUXOR Logo" class="logo-img">
+                    <span class="logo-text">SALUXOR</span>
+                </div>
+                <p class="footer-about">
+                    Next-generation biological engineering, synthesizing diagnostics, metabolic nutrition, custom
+                    performance parameters, and psychiatric wellness into an elegant lifestyle dashboard.
+                </p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Product</h4>
+                <a href="#features">Pillars</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#comparison">Verdict Matrix</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Science</h4>
+                <a href="#">Clinical Trials</a>
+                <a href="#">AI Architecture</a>
+                <a href="#">Longevity Studies</a>
+                <a href="#">Whitepaper</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Security</a>
+                <a href="#">Press Kit</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p class="copyright">&copy; 2026 SALUXOR Inc. All rights reserved. Designed for optimal biological outcomes.
+            </p>
+            <p class="medical-disclaimer">
+                Disclaimer: SALUXOR provides technology tools, artificial intelligence diagnostics synthesis, and
+                recommendations designed for physical optimization. Vetted clinical diagnostic prescriptions require
+                final physician assessment. Read our Privacy Policy for details on HIPAA compliance.
+            </p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
