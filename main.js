@@ -1,3 +1,9 @@
+import { db } from "./firebase.js";
+import {
+    collection,
+    addDoc,
+    serverTimestamp
+} from "firebase/firestore";
 /* ==========================================================================
    SALUXOR INTERACTIVE ENGINE - MAIN JS
    ========================================================================== */
@@ -391,25 +397,41 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailInput = document.getElementById('waitlist-email');
             const email = emailInput.value.trim();
 
-            // Show processing state
-            feedback.textContent = "Validating biological routing keys...";
+            feedback.textContent = "Saving your beta spot...";
             feedback.className = "form-feedback";
 
             const submitBtn = waitlistForm.querySelector('button[type="submit"]');
             const origText = submitBtn.textContent;
+
             submitBtn.disabled = true;
             submitBtn.textContent = "Connecting...";
 
-            setTimeout(() => {
+            (async () => {
+                try {
+
+                    await addDoc(collection(db, "betaUsers"), {
+                        email: email,
+                        joinedAt: serverTimestamp()
+                    });
+
+                    feedback.textContent = "🎉 Welcome to the Saluxor Beta!";
+                    feedback.className = "form-feedback success";
+
+                    emailInput.value = "";
+
+                } catch (error) {
+
+                    console.error(error);
+
+                    feedback.textContent = "Something went wrong. Please try again.";
+                    feedback.className = "form-feedback error";
+
+                }
+
                 submitBtn.disabled = false;
                 submitBtn.textContent = origText;
 
-                // Output successful result
-                const waitlistNumber = Math.floor(14200 + Math.random() * 800).toLocaleString();
-                feedback.textContent = `Beta spot allocated! Check ${email} for system authorization keys. Betalist Position: #${waitlistNumber}`;
-                feedback.className = "form-feedback success";
-                emailInput.value = "";
-            }, 1500);
+            })();
         });
     }
 });
