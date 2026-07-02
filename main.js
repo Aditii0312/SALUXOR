@@ -2,6 +2,7 @@ import { db } from "./firebase.js";
 import {
     doc,
     setDoc,
+    updateDoc,
     serverTimestamp
 } from "firebase/firestore";
 /* ==========================================================================
@@ -387,6 +388,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- 8. Waitlist Form Submit Handler ---
+    let currentBetaEmail = "";
+
     const waitlistForm = document.getElementById('waitlist-form');
     const feedback = document.getElementById('waitlist-feedback');
 
@@ -420,6 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         joinedAt: serverTimestamp()
                     });
+                    currentBetaEmail = email.toLowerCase();
                     feedback.textContent = "🎉 Welcome to the Saluxor Beta!";
                     document.getElementById("beta-modal").classList.remove("hidden");
                     feedback.className = "form-feedback success";
@@ -445,23 +449,40 @@ document.addEventListener('DOMContentLoaded', () => {
 const finishBtn = document.getElementById("finish-beta");
 
 if (finishBtn) {
-    finishBtn.addEventListener("click", () => {
+    finishBtn.addEventListener("click", async () => {
 
-        const interest =
-            document.getElementById("interest").value;
+        const interest = document.getElementById("interest").value;
 
-        const role =
-            document.getElementById("role").value;
+        const role = document.getElementById("role").value;
 
-        const feedbackText =
-            document.getElementById("feedbackText").value;
+        const feedbackText = document.getElementById("feedbackText").value;
 
-        console.log({
-            interest,
-            role,
-            feedbackText
-        });
+        try {
 
-        alert("Finish button works!");
+            await updateDoc(
+                doc(db, "betaUsers", currentBetaEmail),
+                {
+                    interest: interest,
+                    role: role,
+                    feedback: feedbackText
+                }
+            );
+
+            document
+                .getElementById("beta-modal")
+                .classList.add("hidden");
+
+            alert("🎉 Welcome to Saluxor Beta!");
+
+            window.location.href = "/";
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert("Something went wrong. Please try again.");
+
+        }
+
     });
 }
