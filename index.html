@@ -721,6 +721,54 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="./main.js"></script>
+    <!-- Beta Welcome Modal -->
+    <div id="beta-modal" class="beta-modal hidden">
+        <div class="beta-card">
+
+            <h2>🎉 Welcome to Saluxor Beta</h2>
+
+            <p>
+                You're officially on our beta list.
+                Help us personalize your experience.
+            </p>
+
+            <div class="question">
+                <label>What are you most excited about?</label>
+
+                <select id="interest">
+                    <option value="">Choose one</option>
+                    <option>Medical Intelligence</option>
+                    <option>Personalized Fitness</option>
+                    <option>Nutrition</option>
+                    <option>Mental Wellness</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>How will you use Saluxor?</label>
+
+                <select id="role">
+                    <option value="">Choose one</option>
+                    <option>Personal Health</option>
+                    <option>Family</option>
+                    <option>Healthcare Professional</option>
+                    <option>Student / Research</option>
+                    <option>Just Exploring</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>Anything you'd love Saluxor to do?</label>
+
+                <textarea id="feedbackText" placeholder="Optional..."></textarea>
+            </div>
+
+            <button id="finish-beta" class="btn btn-primary">
+                Finish
+            </button>
+
+        </div>
+    </div>
 </body>
 
 </html>

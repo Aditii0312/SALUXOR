@@ -2228,3 +2228,94 @@ a {
         display: none;
     }
 }
+
+/* ===========================
+   BETA POPUP
+=========================== */
+
+.beta-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+.beta-card {
+    width: 90%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 24px;
+
+    background: rgba(18, 18, 24, 0.95);
+
+    border: 1px solid rgba(75, 110, 255, .25);
+
+    box-shadow:
+        0 0 60px rgba(66, 105, 255, .18);
+
+    color: white;
+}
+
+.beta-card h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.beta-card p {
+    text-align: center;
+    color: #9da3b5;
+    margin-bottom: 30px;
+}
+
+.question {
+    margin-bottom: 22px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.question select,
+.question textarea {
+
+    width: 100%;
+
+    background: #111118;
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.question textarea {
+
+    resize: none;
+
+    height: 100px;
+}
+
+#finish-beta {
+
+    width: 100%;
+
+    margin-top: 10px;
+}

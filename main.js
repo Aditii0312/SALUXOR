@@ -1,7 +1,7 @@
 import { db } from "./firebase.js";
 import {
-    collection,
-    addDoc,
+    doc,
+    setDoc,
     serverTimestamp
 } from "firebase/firestore";
 /* ==========================================================================
@@ -409,12 +409,19 @@ document.addEventListener('DOMContentLoaded', () => {
             (async () => {
                 try {
 
-                    await addDoc(collection(db, "betaUsers"), {
-                        email: email,
+                    await setDoc(doc(db, "betaUsers", email.toLowerCase()), {
+                        email: email.toLowerCase(),
+
+                        interest: "",
+
+                        role: "",
+
+                        feedback: "",
+
                         joinedAt: serverTimestamp()
                     });
-
                     feedback.textContent = "🎉 Welcome to the Saluxor Beta!";
+                    document.getElementById("beta-modal").classList.remove("hidden");
                     feedback.className = "form-feedback success";
 
                     emailInput.value = "";
