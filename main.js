@@ -445,45 +445,46 @@ document.addEventListener('DOMContentLoaded', () => {
             })();
         });
     }
+
+    const finishBtn = document.getElementById("finish-beta");
+
+    if (finishBtn) {
+        finishBtn.addEventListener("click", async () => {
+
+            const interest = document.getElementById("interest").value;
+
+            const role = document.getElementById("role").value;
+
+            const feedbackText = document.getElementById("feedbackText").value;
+
+            try {
+
+                await updateDoc(
+                    doc(db, "betaUsers", currentBetaEmail),
+                    {
+                        interest: interest,
+                        role: role,
+                        feedback: feedbackText
+                    }
+                );
+
+                document
+                    .getElementById("beta-modal")
+                    .classList.add("hidden");
+
+                alert("🎉 Welcome to Saluxor Beta!");
+
+                window.location.href = "/";
+
+            }
+            catch (error) {
+
+                console.error("Firebase Error:", error);
+
+                alert(error.message);
+
+            }
+
+        });
+    }
 });
-const finishBtn = document.getElementById("finish-beta");
-
-if (finishBtn) {
-    finishBtn.addEventListener("click", async () => {
-
-        const interest = document.getElementById("interest").value;
-
-        const role = document.getElementById("role").value;
-
-        const feedbackText = document.getElementById("feedbackText").value;
-
-        try {
-
-            await updateDoc(
-                doc(db, "betaUsers", currentBetaEmail),
-                {
-                    interest: interest,
-                    role: role,
-                    feedback: feedbackText
-                }
-            );
-
-            document
-                .getElementById("beta-modal")
-                .classList.add("hidden");
-
-            alert("🎉 Welcome to Saluxor Beta!");
-
-            window.location.href = "/";
-
-        }
-        catch (error) {
-
-            console.error("Firebase Error:", error);
-
-            alert(error.message);
-
-        }
-
-    });
-}
