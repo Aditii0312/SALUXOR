@@ -471,6 +471,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById("beta-modal").classList.add("hidden");
 
                 document.getElementById("success-modal").classList.remove("hidden");
+                document.getElementById("countdown").textContent = "3";
+
+                let seconds = 3;
+
+                const countdown = document.getElementById("countdown");
+
+                const timer = setInterval(() => {
+
+                    seconds--;
+
+                    countdown.textContent = seconds;
+
+                    if (seconds <= 0) {
+
+                        clearInterval(timer);
+
+                        document
+                            .getElementById("success-modal")
+                            .classList.add("hidden");
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                }, 1000);
 
             }
             catch (error) {
@@ -494,6 +522,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         top: 0,
                         behavior: "smooth"
                     });
+
+                    location.reload();
 
                 });
 
