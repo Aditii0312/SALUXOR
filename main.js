@@ -442,3 +442,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+const finishBtn = document.getElementById("finish-beta");
+
+if (finishBtn) {
+    finishBtn.addEventListener("click", () => {
+
+        const interest =
+            document.getElementById("interest").value;
+
+        const role =
+            document.getElementById("role").value;
+
+        const feedbackText =
+            document.getElementById("feedbackText").value;
+
+        console.log({
+            interest,
+            role,
+            feedbackText
+        });
+
+        alert("Finish button works!");
+    });
+}
