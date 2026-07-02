@@ -468,13 +468,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 );
 
-                document
-                    .getElementById("beta-modal")
-                    .classList.add("hidden");
+                document.getElementById("beta-modal").classList.add("hidden");
 
-                alert("🎉 Welcome to Saluxor Beta!");
-
-                window.location.href = "/";
+                document.getElementById("success-modal").classList.remove("hidden");
 
             }
             catch (error) {
@@ -484,7 +480,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(error.message);
 
             }
+            const continueBtn = document.getElementById("continue-home");
 
+            if (continueBtn) {
+
+                continueBtn.addEventListener("click", () => {
+
+                    document
+                        .getElementById("success-modal")
+                        .classList.add("hidden");
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                });
+
+            }
         });
     }
 });
