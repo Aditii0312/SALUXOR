@@ -476,11 +476,12 @@ if (finishBtn) {
 
             window.location.href = "/";
 
-        } catch (error) {
+        }
+        catch (error) {
 
-            console.error(error);
+            console.error("Firebase Error:", error);
 
-            alert("Something went wrong. Please try again.");
+            alert(error.message);
 
         }
 
