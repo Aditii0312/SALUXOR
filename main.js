@@ -508,26 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(error.message);
 
             }
-            const continueBtn = document.getElementById("continue-home");
 
-            if (continueBtn) {
-
-                continueBtn.addEventListener("click", () => {
-
-                    document
-                        .getElementById("success-modal")
-                        .classList.add("hidden");
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
-                    location.reload();
-
-                });
-
-            }
         });
     }
 });

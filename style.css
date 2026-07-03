@@ -2319,3 +2319,75 @@ a {
 
     margin-top: 10px;
 }
+
+/* SUCCESS POPUP */
+
+.success-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 24px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: linear-gradient(135deg, #4f8cff, #6f5cff);
+
+    box-shadow:
+        0 0 25px rgba(79, 140, 255, .6),
+        0 0 70px rgba(79, 140, 255, .35);
+
+    animation: pulseGlow 2s infinite;
+}
+
+.success-text {
+
+    color: #c8d2e7;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+@keyframes pulseGlow {
+
+    0% {
+
+        transform: scale(1);
+
+        box-shadow:
+            0 0 25px rgba(79, 140, 255, .6),
+            0 0 70px rgba(79, 140, 255, .35);
+
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+        box-shadow:
+            0 0 45px rgba(79, 140, 255, .8),
+            0 0 100px rgba(79, 140, 255, .5);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
