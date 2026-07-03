@@ -2235,9 +2235,9 @@ a {
 
 .beta-modal {
     position: fixed;
+    backdrop-filter: blur(18px);
+    background: rgba(5, 10, 20, 0.65);
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(12px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2258,10 +2258,14 @@ a {
 
     border: 1px solid rgba(75, 110, 255, .25);
 
-    box-shadow:
-        0 0 60px rgba(66, 105, 255, .18);
+    box-shadow: 0 0 60px rgba(66, 105, 255, .18);
 
     color: white;
+    animation: popupAppear .45s ease;
+    transform-origin: center;
+    will-change: transform, opacity;
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .45);
+    border: 1px solid rgba(255, 255, 255, .08);
 }
 
 .beta-card h2 {
@@ -2387,6 +2391,28 @@ a {
     100% {
 
         transform: scale(1);
+
+    }
+
+}
+
+@keyframes popupAppear {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px) scale(.95);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
 
     }
 
