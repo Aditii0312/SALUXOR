@@ -2417,3 +2417,69 @@ a {
     }
 
 }
+
+/* SUCCESS SOCIALS */
+
+.success-socials {
+
+    margin: 28px 0 18px;
+
+    text-align: center;
+
+}
+
+.success-socials p {
+
+    color: #aab4c8;
+
+    font-size: .95rem;
+
+    margin-bottom: 14px;
+
+}
+
+.success-social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+.success-social-links a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .06);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(14px);
+
+    transition: all .3s ease;
+
+    font-weight: 600;
+
+}
+
+.success-social-links a:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(79, 140, 255, .18);
+
+    border-color: #4f8cff;
+
+    box-shadow: 0 0 24px rgba(79, 140, 255, .35);
+
+}
