@@ -2510,10 +2510,11 @@ a {
 }
 
 .advantage-title {
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 0.95;
+    font-size: clamp(2.4rem, 4.5vw, 4.8rem);
+    line-height: 1.05;
     font-weight: 800;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
+    max-width: 700px;
 }
 
 .text-blue {
@@ -2539,28 +2540,31 @@ a {
 }
 
 .advantage-card {
-    background: linear-gradient(180deg, #4978ff, #2f56d8);
-    border-radius: 22px;
-    padding: 40px;
+    background: linear-gradient(180deg, #4c74ff, #2f57dd);
+    border-radius: 24px;
+    padding: 30px;
     color: white;
-    box-shadow: 0 30px 80px rgba(77, 115, 255, .35);
+    max-width: 390px;
+    width: 100%;
+    margin-left: auto;
+    box-shadow: 0 20px 60px rgba(77, 115, 255, .28);
 }
 
 .advantage-card h3 {
-    font-size: 2rem;
-    margin-bottom: 25px;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
 }
 
 .metric {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0;
+    padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, .18);
 }
 
 .metric strong {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
 }
 
 .metric-text {
