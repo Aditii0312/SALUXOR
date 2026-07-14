@@ -2497,7 +2497,7 @@ a {
     display: grid;
     grid-template-columns: 1.5fr 0.9fr;
     gap: 80px;
-    align-items: center;
+    align-items: start;
 }
 
 .section-tag {
@@ -2547,6 +2547,7 @@ a {
     max-width: 390px;
     width: 100%;
     margin-left: auto;
+    margin-top: 90px;
     box-shadow: 0 20px 60px rgba(77, 115, 255, .28);
 }
 
